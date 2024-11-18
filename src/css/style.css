@@ -9,47 +9,61 @@
 
     --default-font: 'Poppins';
     --highlight-font: 'Tenor Sans';
-    --feature-font: 'Bree Serif'
+    --feature-font: 'Bree Serif';
 }
 
 * {
     font-family: var(--default-font);
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html,
 body {
+    max-height: 100%;
+    max-width: 100%;
     height: 100%;
-    margin: 0px;
-    padding: 0px;
+    width: 100%;
+}
+
+iframe {
+    height: 100vh;
+    width: 100vw;
+    border: none;
 }
 
 .row {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
     height: 100vh;
 }
 
 .column-personal-info {
+    flex: 0 0 45%;
+    margin: 0px;
+}
+
+.column-personal-info, .column {
     display: flex;
     flex-direction: column;
-    width: 45%;
-    height: 100vh;
+    padding: 24px;
     margin: 0px;
-    padding: 0px 24px;
+    min-width: 0;
 }
 
 .column-main {
+    min-height: 100%;
+    background-color: var(--light-blue);
+    color: white;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    margin: 0px;
-    padding: 24px;
-    background-color: var(--light-blue);
-    background-attachment: fixed;
-    color: white;
+    justify-content: center;
+    flex-grow: 1;
 }
+
 
 .centered {
     align-items: center;
@@ -90,29 +104,58 @@ body {
     cursor: pointer;
 }
 
-#language-switcher-container {
+.home-container {
+    min-height: 100%;
+    background-color: var(--light-blue);
+    justify-content: center;
+    display: flex;             
+    flex-direction: column;    
+    justify-content: center;   
+    align-items: center;       
+    min-height: 100vh; 
+}
+
+#language-switcher {
     display: flex;
     flex-direction: row;
     justify-content: end;
     align-self: flex-end;
+    justify-self: flex-start;  
     color: black;
-    width: 100vh;
+    width: 100vw;
     margin-right: 24px;
 }
 
-#language-switcher-container > p {
+.home-container > #language-switcher > p {
     display: inline-block;
     font-family: var(--feature-font);
     font-size: 1.5em;
 }
 
 .language-button {
+    display: none;
+}
+
+#language-switcher label {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.language-button:checked + label {
+    color: white;
+    background-color: white;
+}
+
+#language-switcher label {
     border: none;
     background: transparent;
     font-size: 1.2em;
 }
 
-.language-button:hover {
+#language-switcher label:hover {
     cursor: pointer;
     color: white;
 }
@@ -128,4 +171,28 @@ body {
 #about-me {
     width: 80%;
     font-size: 2em;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.light {
+    background-color: var(--light-blue);
+    border: 1px solid white;
+    margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stacks columns vertically on smaller screens */
+    }
+
+    .column-personal-info,
+    .column-main {
+        flex: 0 0 100%; /* Columns take full width in stacked layout */
+        padding: 16px; /* Adjust padding for smaller screens */
+    }
 }
