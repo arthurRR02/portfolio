@@ -5,24 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arthur Rios</title>
     <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="js/navigation.js" defer></script>
 </head>
 <body>
+    <div class="desktop-design">
     <main class="row">
         <div class="column-personal-info centered">
             <picture>
-                <source media="(min-width: 1200px)" srcset="../assets/profile_img.png">
+                <source media="(min-width: 1600px)" srcset="../assets/profile_img.png">
                 <source media="(min-width: 800px)" srcset="../assets/profile_img_md.png">
                 <source media="(min-width: 400px)" srcset="../assets/profile_img_sm.png">
                 <img src="../assets/profile_img.png" alt="profile_img">
             </picture>
             <div id="column-identify">
             <h1 class="identify name-label">Arthur Rios</h1>
-            <h2 class="identify">Desenvolvedor</h2>
-            <button class="main-button">Currículo</button>
-            <button class="main-button">Contatos</button>
+            <h2 class="identify" data-i18n="role"></h2>
+            <button class="main-button" data-i18n="resume"></button>
+            <button class="main-button" data-i18n="contacts" id="contacts-button"></button>
             </div>
         </div>
-        <iframe name="home" src="home.html"></iframe>
+        <iframe name="intern-navigation" src="home.html" id="intern-navigation"></iframe>
     </main>
+</div>
+
+<div class="mobile-design"></div>
 </body>
 </html>

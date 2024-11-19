@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="components/language-switcher.js" defer></script>
 </head>
 <body>
-    <div class="column home-container">
-        <div id="language-switcher">
-            <p><input type="radio" id="en" name="options" value="1" class="language-button">
-                <label for="en">EN</label>/<input type="radio" id="pt" name="options" value="2" class="language-button" checked>
-                <label for="pt">PT</label>/<input type="radio" id="es" name="options" value="3" class="language-button">
-                <label for="es">ES</label></p>
-        </div>
+    <div class="column page-container">
+        <language-switcher></language-switcher>
         <div class="column column-main">
-            <h1>E aí, tudo beleza?</h1>
+            <h1 data-i18n="greetings"></h1>
             <hr class="divider"></hr>
-            <p id="about-me">Meu nome é Arthur e eu sou o desenvolvedor que você procurava para impulsionar o seu sonho no mundo digital!</p>
+            <p data-i18n="about-me"></p>
             <div class="button-grid">
-                <button class="main-button light">Sobre mim</button>
-                <button class="main-button light">Serviços</button>
-                <button class="main-button light">Portfolio</button>
+                <button class="main-button light" data-i18n="about-me-button"></button>
+                <button class="main-button light" data-i18n="services"></button>
+                <button class="main-button light" data-i18n="portfolio"></button>
             </div>
+        </div>
+        <div class="contacts-button-row">
+            <a href="https://github.com/arthurRR02?tab=repositories" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://wa.me/542212206956" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/arthur-rios-ribeiro-5462931b5/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
         </div>
     </div>
 </body>
