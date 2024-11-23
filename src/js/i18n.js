@@ -18,7 +18,7 @@ class I18n {
     translatePage() {
         document.querySelectorAll("[data-i18n]").forEach((element) => {
             const key = element.getAttribute("data-i18n");
-            element.textContent = this.translations[key] || key;
+            element.innerHTML = this.translations[key] || key;
         });
     }
 }

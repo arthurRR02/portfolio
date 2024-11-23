@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="module" src="js/iframe-translation.js"></script>
-    <script type="module" src="js/home.js" defer></script>
     <script type="module" src="components/language-switcher.js" defer></script>
     <script type="module" src="components/contacts-button-row.js" defer></script>
     <script type="module" src="components/main-button-grid.js" defer></script>
@@ -17,10 +16,11 @@
         <div class="column column-main">
             <h1 data-i18n="greetings"></h1>
             <hr class="divider">
-            <p data-i18n="aboutMe"></p>
-            <main-button-grid></main-button-grid>
+            <section id="scrollable-container">
+                <p data-i18n="aboutMeText"></p>
+            </section>
+            <main-button-grid type="about-me"></main-button-grid>
         </div>
         <contacts-button-row></contacts-button-row>
-    </div>
 </body>
 </html>

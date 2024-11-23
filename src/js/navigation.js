@@ -2,7 +2,7 @@ class Navigation {
     constructor() {}
 
     navigate(page) {
-        const iframe = document.getElementById("intern-navigation");
+        const iframe = parent.document.getElementById("intern-navigation");
         iframe.src = page;
     }
 }

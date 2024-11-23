@@ -25,6 +25,12 @@ body {
     max-width: 100%;
     height: 100%;
     width: 100%;
+    scrollbar-color: white var(--medium-blue);
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 .desktop-design {
@@ -118,8 +124,7 @@ iframe {
     background-color: var(--light-blue);
     justify-content: center;
     display: flex;             
-    flex-direction: column;    
-    justify-content: center;   
+    flex-direction: column; 
     align-items: center; 
 }
 
@@ -165,7 +170,6 @@ language-switcher label:hover {
 }
 
 
-
 .divider {
     width: 80%;
     height: 2px;
@@ -179,19 +183,35 @@ language-switcher label:hover {
     font-size: 2em;
 }
 
-.button-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
+
+#back-button {
+    align-self: self-start;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
-.light {
-    background-color: var(--light-blue);
-    border: 1px solid white;
-    margin-top: 24px;
+#back-button:hover {
+    color: white;
 }
 
-.contacts-button-row {
+#contacts-container {
+    margin-top: 14px;
+    font-weight: bold;
+}
+
+#contacts-container i {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.contact-icon-background {
+    background-color: black;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+contacts-button-row {
     display: flex;
     flex-direction: row;
     justify-self: end;
@@ -201,10 +221,67 @@ language-switcher label:hover {
     background-color: var(--light-blue);
 }
 
-.contacts-button-row > a {
+contacts-button-row a {
     margin: 0 5px;
     color: black;
 }
+
+contacts-button-row i {
+    font-size: 1.5em;
+}
+
+#scrollable-container {
+    height: 60vh;
+    margin-top: 20px;
+    overflow-y: auto;
+    text-align: justify;
+    padding: 10px;
+}
+
+#scrollable-container::-webkit-scrollbar-button {
+    display: none;
+}
+
+#scrollable-container::-webkit-scrollbar-thumb {
+    background-color: var(--medium-blue);
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    min-width: 150px;
+    padding: 20px;
+    border: 1px solid white;
+}
+
+.accordion-header p {
+    margin-right: 20px;
+}
+
+.accordion-header i {
+    transition: transform 0.5s ease;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 15px;
+}
+
+.accordion-content.openned {
+    padding: 15px;
+    background-color: var(--medium-blue);
+    border: 1px solid white;
+}
+
 
 @media (max-width: 768px) {
     .desktop-design {

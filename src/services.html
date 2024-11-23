@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module" src="js/iframe-translation.js"></script>
+    <script type="module" src="js/services.js" defer></script>
+    <script type="module" src="components/language-switcher.js" defer></script>
+    <script type="module" src="components/contacts-button-row.js" defer></script>
+    <script type="module" src="components/main-button-grid.js" defer></script>
+</head>
+
+<body>
+    <div class="column page-container">
+        <language-switcher></language-switcher>
+        <div class="column column-main">
+            <h1 data-i18n="services"></h1>
+            <hr class="divider">
+            <section id="scrollable-container">
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <p data-i18n="servicesAppsDevelopment"></p>
+                        <i class="fa-solid fa-chevron-down chevron"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p data-i18n="servicesAppsDevelopmentDetail"></p>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <p data-i18n="servicesAppAdjustmentAndImprovement"></p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p data-i18n="servicesAppAdjustmentAndImprovementDetail"></p>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <p data-i18n="servicesApiIntegration"></p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p data-i18n="servicesApiIntegrationDetail"></p>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <p data-i18n="servicesHelpPlan"></p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p data-i18n="servicesHelpPlanDetail"></p>
+                    </div>
+                </div>
+                
+            </section>
+            <main-button-grid type="services"></main-button-grid>
+        </div>
+        <contacts-button-row></contacts-button-row>
+</body>
+
+</html>
