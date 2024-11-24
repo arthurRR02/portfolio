@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module" src="js/translation.js"></script>
+    <script type="module" src="js/portfolio.js"></script>
+    <script type="module" src="components/language-switcher.js" defer></script>
+    <script type="module" src="components/contacts-button-row.js" defer></script>
+</head>
+
+<body>
+    <div class="gradient-background column page-container">
+        <language-switcher></language-switcher>
+        <i class="fa-solid fa-arrow-left back-button inverse-hover"></i>
+        <h1 data-i18n="portfolioTitle" class="text-gradient"></h1>
+        <div class="column-potfolio">
+            <div class="row-potfolio titles">
+                <div class="column-portfolio portfolio-inverse centered">
+                    <h2 data-i18n="portfolioWeb"></h2>
+                    <hr>
+                </div>
+                <div class="column-portfolio centered">
+                    <h2 data-i18n="portfolioMoreProjects"></h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row-potfolio">
+                <div class="column-portfolio">
+                        <picture id="individuar-site-image" class="shadow">
+                            <source media="(min-width: 1600px)" srcset="../assets/individuar_site.png">
+                            <source media="(min-width: 1300px)" srcset="../assets/individuar_site_md.png">
+                            <source media="(min-width: 800px)" srcset="../assets/individuar_site_sm.png">
+                            <img src="../assets/individuar_site_sm.png" alt="individuar-site" />
+                        </picture>
+                        <picture id="elso-site-image" class="shadow">
+                            <source media="(min-width: 1600px)" srcset="../assets/elso_site.png">
+                            <source media="(min-width: 1300px)" srcset="../assets/elso_site_md.png">
+                            <source media="(min-width: 800px)" srcset="../assets/elso_site_sm.png">
+                            <img src="../assets/elso_site_sm.png" alt="elso-site" />
+                        </picture>
+                        <picture id="portfolio-site-image" class="shadow">
+                            <source media="(min-width: 1600px)" srcset="../assets/portfolio_site.png">
+                            <source media="(min-width: 1300px)" srcset="../assets/portfolio_site_md.png">
+                            <source media="(min-width: 800px)" srcset="../assets/portfolio_site_sm.png">
+                            <img src="../assets/elso_site_sm.png" alt="elso-site" />
+                        </picture>
+                </div>
+                <div class="column-portfolio">
+                    <picture id="github-profile">
+                        <source media="(min-width: 1300px)" srcset="../assets/github_profile.png">
+                        <source media="(min-width: 800px)" srcset="../assets/github_profile_md.png">
+                        <source media="(min-width: 400px)" srcset="../assets/github_profile_sm.png">
+                        <img src="../assets/github_profile.png" alt="individuar-site" />
+                    </picture>
+                </div>
+            </div>
+
+            <main-button-grid></main-button-grid>
+        </div>
+        <contacts-button-row></contacts-button-row>
+    </div>
+</body>
+
+</html>
