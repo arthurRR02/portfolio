@@ -7,8 +7,8 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script type="module" src="js/translation.js"></script>
-    <script type="module" src="js/portfolio.js"></script>
+    <script type="module" src="js/translation.js" defer></script>
+    <script type="module" src="js/portfolio.js" defer></script>
     <script type="module" src="components/language-switcher.js" defer></script>
     <script type="module" src="components/contacts-button-row.js" defer></script>
 </head>
@@ -31,19 +31,19 @@
             </div>
             <div class="row-potfolio">
                 <div class="column-portfolio">
-                        <picture id="individuar-site-image" class="shadow">
+                        <picture id="individuar-site-image" class="shadow portfolio-item">
                             <source media="(min-width: 1600px)" srcset="../assets/individuar_site.png">
                             <source media="(min-width: 1300px)" srcset="../assets/individuar_site_md.png">
                             <source media="(min-width: 800px)" srcset="../assets/individuar_site_sm.png">
                             <img src="../assets/individuar_site_sm.png" alt="individuar-site" />
                         </picture>
-                        <picture id="elso-site-image" class="shadow">
+                        <picture id="elso-site-image" class="shadow portfolio-item">
                             <source media="(min-width: 1600px)" srcset="../assets/elso_site.png">
                             <source media="(min-width: 1300px)" srcset="../assets/elso_site_md.png">
                             <source media="(min-width: 800px)" srcset="../assets/elso_site_sm.png">
                             <img src="../assets/elso_site_sm.png" alt="elso-site" />
                         </picture>
-                        <picture id="portfolio-site-image" class="shadow">
+                        <picture id="portfolio-site-image" class="shadow portfolio-item not-clickable">
                             <source media="(min-width: 1600px)" srcset="../assets/portfolio_site.png">
                             <source media="(min-width: 1300px)" srcset="../assets/portfolio_site_md.png">
                             <source media="(min-width: 800px)" srcset="../assets/portfolio_site_sm.png">
@@ -65,5 +65,4 @@
         <contacts-button-row></contacts-button-row>
     </div>
 </body>
-
 </html>

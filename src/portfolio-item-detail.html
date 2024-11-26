@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module" src="js/translation.js" defer></script>
+    <script type="module" src="js/portfolio-item-detail.js" defer></script>
+    <script type="module" src="components/language-switcher.js" defer></script>
+    <script type="module" src="components/contacts-button-row.js" defer></script>
+</head>
+<body>
+    <div class="gradient-background column page-container">
+        <language-switcher></language-switcher>
+        <i class="fa-solid fa-arrow-left back-button inverse-hover"></i>
+        <h1 data-i18n="portfolioTitle" class="text-gradient"></h1>
+        <div class="column-potfolio">
+            <div class="row-potfolio titles">
+                <div class="column-portfolio portfolio-inverse centered">
+                    <h2 data-i18n="portfolioGoToThisWebsite" class="clickable-site"></h2>
+                    <hr>
+                </div>
+                <div class="column-portfolio centered">
+                    <h2 data-i18n="portfolioTitle"></h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row-potfolio">
+                <div class="column-portfolio" id="portfolio-items-images">
+                      
+                </div>
+                <div class="column-portfolio" id="portfolio-info">
+            </div>
+
+            <main-button-grid></main-button-grid>
+        </div>
+        <contacts-button-row></contacts-button-row>
+    </div>
+</body>
+</html>

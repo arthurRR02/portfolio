@@ -352,13 +352,22 @@ contacts-button-row i {
 
 #github-profile {
     margin: 48px 24px;
+    cursor: pointer;
+}
+
+.portfolio-item {
+    box-shadow: 0 4px 8px black;
+    cursor: pointer;
+}
+
+.portfolio-item.not-clickable {
+    cursor: default;
 }
 
 #individuar-site-image {
     position: absolute;
     bottom: 50px;
     left: 80px;
-    
 }
 
 #elso-site-image {
@@ -373,9 +382,65 @@ contacts-button-row i {
     left: 80px;
 }
 
-.shadow {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.portfolio-grid-image {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 24px;
 }
+
+#portfolio-items-images {
+    max-height: 70vh;
+}
+
+.clickable-site:hover {
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+.wide-image {
+    grid-column: span 12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #portfolio-info {
+    color: white;
+    overflow-y: auto;
+  }
+
+  #portfolio-info > #feature-description {
+    font-size: 1.2em;
+    margin: 0 24px;
+  }
+
+  #portfolio-info > h3 {
+    margin: 24px auto;
+  }
+
+  .grid-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 8px;
+    margin: 12px 24px;
+  }
+
+  .feature-container {
+    display: flex;
+    background-color: var(--medium-blue);
+    color: black;
+    padding: 16px;
+    border-radius: 16px;
+    font-size: 0.8em;
+    align-items: center;
+  }
+
+  .feature-title {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
 
 .fade-out {
     animation: fadeOut 0.3s forwards; 
