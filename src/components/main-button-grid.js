@@ -5,10 +5,8 @@ class MainButtonGrid extends HTMLElement {
     connectedCallback() {
         const typeValue = this.getAttribute("type");
 
-        switch (typeValue) {
-            case "about-me":
-                this.innerHTML = `
-                <style>
+        const style = `
+        <style>
                     .button-grid {
                         display: grid;
                         grid-template-columns: 1fr 1fr 1fr;
@@ -29,11 +27,17 @@ class MainButtonGrid extends HTMLElement {
 
 
                     .light {
-                        background-color: var(--light-blue);
+                        background-color: var(--medium-blue);
                         border: 1px solid white;
                         margin-top: 24px;
                     }
                 </style>
+        `;
+
+        switch (typeValue) {
+            case "about-me":
+                this.innerHTML = `
+                ${style}    
             <div class="button-grid">
                 <button class="main-button light" id="home-button">Home</button>
                 <button class="main-button light" data-i18n="services" id="services-button"></button>
@@ -43,32 +47,7 @@ class MainButtonGrid extends HTMLElement {
                 break;
             case "services":
                 this.innerHTML = `
-                     <style>
-                        .button-grid {
-                            display: grid;
-                            grid-template-columns: 1fr 1fr 1fr;
-                            gap: 24px;
-                        }
-                            .main-button {
-                                margin-top: 10px;
-                                padding: 10px;
-                                background-color: var(--dark-blue);
-                                color: white;
-                                border: none;
-                            }
-
-                            .main-button:hover {
-                                background-color: var(--button-hovered);
-                                cursor: pointer;
-                            }
-
-
-                            .light {
-                                background-color: var(--light-blue);
-                                border: 1px solid white;
-                                margin-top: 24px;
-                            }
-                </style>
+                ${style}
             <div class="button-grid">
             <button class="main-button light" id="home-button">Home</button>
                 <button class="main-button light" data-i18n="aboutMeButton" id="about-me-button"></button>
@@ -78,32 +57,7 @@ class MainButtonGrid extends HTMLElement {
                 break;
             case "portfolio":
                 this.innerHTML = `
-                     <style>
-                        .button-grid {
-                            display: grid;
-                            grid-template-columns: 1fr 1fr 1fr;
-                            gap: 24px;
-                        }
-                            .main-button {
-                            margin-top: 10px;
-                            padding: 10px;
-                            background-color: var(--dark-blue);
-                            color: white;
-                            border: none;
-                        }
-
-                        .main-button:hover {
-                            background-color: var(--button-hovered);
-                            cursor: pointer;
-                        }
-
-
-                        .light {
-                            background-color: var(--light-blue);
-                            border: 1px solid white;
-                            margin-top: 24px;
-                        }
-                </style>
+                ${style}
             <div class="button-grid">
             <button class="main-button light" id="home-button">Home</button>
                 <button class="main-button light" data-i18n="aboutMeButton" id="about-me-button"></button>
@@ -113,32 +67,7 @@ class MainButtonGrid extends HTMLElement {
                 break;
             default:
                 this.innerHTML = `
-                     <style>
-                        .button-grid {
-                        display: grid;
-                        grid-template-columns: 1fr 1fr 1fr;
-                        gap: 24px;
-                    }
-                        .main-button {
-                        margin-top: 10px;
-                        padding: 10px;
-                        background-color: var(--dark-blue);
-                        color: white;
-                        border: none;
-                    }
-
-                    .main-button:hover {
-                        background-color: var(--button-hovered);
-                        cursor: pointer;
-                    }
-
-
-                    .light {
-                        background-color: var(--light-blue);
-                        border: 1px solid white;
-                        margin-top: 24px;
-                    }
-                </style>
+                ${style}
             <div class="button-grid">
                 <button class="main-button light" data-i18n="aboutMeButton" id="about-me-button"></button>
                 <button class="main-button light" data-i18n="services" id="services-button"></button>
