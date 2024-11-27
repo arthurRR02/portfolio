@@ -1,8 +1,9 @@
 class PortfolioItem {
-    constructor(description, featureTitles, featureDescriptions) {
+    constructor(description, featureTitles, featureDescriptions, imageName) {
         this.description = description;
         this.featureTitles = featureTitles;
         this.featureDescriptions = featureDescriptions;
+        this.imageName = imageName;
     }
 
     static getPortfolioItems() {
@@ -20,7 +21,8 @@ class PortfolioItem {
                     "portfolioIndividuarLocationDescription",
                     "portfolioIndividuarFormDescription",
                     "portfolioIndividuarContactDescription",
-                ]
+                ],
+                "individuar_site"
             ),
             new PortfolioItem(
                 "portfolioElsoDescription",
@@ -35,7 +37,8 @@ class PortfolioItem {
                     "portfolioElsoFaqDescription",
                     "portfolioElsoTestimonialsDescription",
                     "portfolioElsoTextsDescription"
-                ]
+                ],
+                "elso_site"
             )
         ];
     }

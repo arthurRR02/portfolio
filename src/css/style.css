@@ -25,10 +25,11 @@ body {
     max-width: 100%;
     height: 100%;
     width: 100%;
-    background-color: var(--light-blue);
-    scrollbar-color: white var(--medium-blue);
+    background-color: var(--medium-blue);
+    scrollbar-color: white var(--light-blue);
     font-size: 20px;
 }
+
 
 a {
     text-decoration: none;
@@ -81,7 +82,7 @@ iframe {
 
 .column-main {
     min-height: 100%;
-    background-color: var(--light-blue);
+    background-color: var(--medium-blue);
     color: white;
     display: flex;
     flex-direction: column;
@@ -122,6 +123,8 @@ iframe {
     background-color: var(--dark-blue);
     color: white;
     border: none;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 .main-button:hover {
@@ -132,7 +135,7 @@ iframe {
 .page-container {
     min-height: 100%;
     min-height: 100vh;
-    background-color: var(--light-blue);
+    background-color: var(--medium-blue);
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -185,7 +188,7 @@ language-switcher label:hover {
     width: 80%;
     height: 2px;
     margin: 0px;
-    background-color: var(--medium-blue);
+    background-color: var(--dark-blue);
     border: none;
 }
 
@@ -257,7 +260,7 @@ contacts-button-row i {
 }
 
 #scrollable-container::-webkit-scrollbar-thumb {
-    background-color: var(--medium-blue);
+    background-color: var(--light-blue);
 }
 
 .accordion {
@@ -300,11 +303,11 @@ contacts-button-row i {
     width: 100%;
     min-height: 100%;
     height: auto;
-    background: linear-gradient(90deg, white 0%, white 50%, var(--light-blue) 50%, var(--light-blue) 100%);
+    background: linear-gradient(90deg, white 0%, white 50%, var(--medium-blue) 50%, var(--medium-blue) 100%);
 }
 
 .text-gradient {
-    background: linear-gradient(90deg, var(--light-blue) 0%, var(--light-blue) 50%, white 50%, white 100%);
+    background: linear-gradient(90deg, var(--medium-blue) 0%, var(--medium-blue) 50%, white 50%, white 100%);
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -337,7 +340,7 @@ contacts-button-row i {
 
 .column-portfolio > hr {
     width: 80%;
-    border-color: var(--medium-blue);
+    border-color: var(--dark-blue);
 }
 
 .portfolio-inverse {
@@ -360,8 +363,8 @@ contacts-button-row i {
     cursor: pointer;
 }
 
-.portfolio-item.not-clickable {
-    cursor: default;
+.not-clickable {
+    cursor: default !important;
 }
 
 #individuar-site-image {
@@ -387,6 +390,7 @@ contacts-button-row i {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     gap: 24px;
+    margin: 0 24px;
 }
 
 #portfolio-items-images {
@@ -400,9 +404,13 @@ contacts-button-row i {
 
 .wide-image {
     grid-column: span 12;
+    grid-row: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: scale(1.2);
+    opacity: 1;
+    z-index: 10;
   }
 
   #portfolio-info {
@@ -423,17 +431,16 @@ contacts-button-row i {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    gap: 8px;
+    gap: 24px;
     margin: 12px 24px;
   }
 
   .feature-container {
     display: flex;
-    background-color: var(--medium-blue);
+    background-color: var(--light-blue);
     color: black;
     padding: 16px;
-    border-radius: 16px;
-    font-size: 0.8em;
+    font-size: 0.6em;
     align-items: center;
   }
 
@@ -441,6 +448,20 @@ contacts-button-row i {
     font-weight: bold;
     font-size: 1.1em;
   }
+
+  .feature-description {
+    text-align: right;
+  }
+
+  .image-grid-item {
+    cursor: pointer;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+  }
+
+  .image-grid-item:not(.wide-image) {
+    opacity: 0.8;
+    transform: scale(1);
+}
 
 .fade-out {
     animation: fadeOut 0.3s forwards; 

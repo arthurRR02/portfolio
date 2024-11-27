@@ -1,24 +1,35 @@
 import PortfolioItem from "./models/portfolio-item.js";
 
-const elementIndex = parseInt(sessionStorage.getItem("elementIndex"));
 const portfolioItems = PortfolioItem.getPortfolioItems();
 
-document.getElementById("portfolio-items-images").innerHTML = `
-    <div class="portfolio-grid-image">
-        <picture class="wide-image">
-            <source media="(min-width: 1600px)" srcset="../assets/individuar_site.png">
-            <source media="(min-width: 1300px)" srcset="../assets/individuar_site_md.png">
-            <source media="(min-width: 800px)" srcset="../assets/individuar_site_sm.png">
-            <img src="../assets/individuar_site_sm.png" alt="individuar-site" />
+function updateInformation() {
+    const elementIndex = parseInt(sessionStorage.getItem("elementIndex"));
+
+    let imageList = ``;
+
+for(let i = 0; i < portfolioItems.length; i++) {
+    if(elementIndex === i) {
+        imageList += `
+        <picture class="wide-image image-grid-item">
+            <source media="(min-width: 1600px)" srcset="../assets/${portfolioItems[i].imageName}.png">
+            <source media="(min-width: 1300px)" srcset="../assets/${portfolioItems[i].imageName}_md.png">
+            <source media="(min-width: 800px)" srcset="../assets/${portfolioItems[i].imageName}_sm.png">
+            <img src="../assets/${portfolioItems[i].imageName}_sm.png" alt="${portfolioItems[i].imageName}" />
         </picture>
-        <picture>
-            <source media="(min-width: 1600px)" srcset="../assets/elso_site.png">
-            <source media="(min-width: 1300px)" srcset="../assets/elso_site_md.png">
-            <source media="(min-width: 800px)" srcset="../assets/elso_site_sm.png">
-            <img src="../assets/elso_site_sm.png" alt="elso-site" />
+    `;
+    } else {
+        imageList += `
+        <picture class="image-grid-item">
+            <source media="(min-width: 1600px)" srcset="../assets/${portfolioItems[i].imageName}.png">
+            <source media="(min-width: 1300px)" srcset="../assets/${portfolioItems[i].imageName}_md.png">
+            <source media="(min-width: 800px)" srcset="../assets/${portfolioItems[i].imageName}_sm.png">
+            <img src="../assets/${portfolioItems[i].imageName}_sm.png" alt="${portfolioItems[i].imageName}" />
         </picture>
-    </div>
-`;
+    `;
+    }
+}
+
+document.querySelector(".portfolio-grid-image").innerHTML = imageList;
 
 let featuresHtml = ``;
 
@@ -26,7 +37,7 @@ for (let i = 0; i < portfolioItems[elementIndex].featureTitles.length; i++) {
     featuresHtml += `
         <div class="feature-container">
             <p><span data-i18n="${portfolioItems[elementIndex].featureTitles[i]}" class="feature-title"></span>
-                <span data-i18n="${portfolioItems[elementIndex].featureDescriptions[i]}"></span></p>
+                <span data-i18n="${portfolioItems[elementIndex].featureDescriptions[i]}" class="feture-description"></span></p>
         </div>
     `;
 }
@@ -38,6 +49,25 @@ document.getElementById("portfolio-info").innerHTML = `
         ${featuresHtml}
     </div>
 `;
+
+document.querySelectorAll(".image-grid-item").forEach((element, index) => {
+   if(element.classList.contains("wide-image")) {
+    element.classList.add("not-clickable");
+   } else {
+    element.addEventListener("click", function() {
+        document.querySelectorAll(".image-grid-item").forEach(el => el.classList.remove("wide-image"));
+        element.classList.toggle('animate'); 
+        element.classList.add("wide-image");
+        sessionStorage.setItem("elementIndex", index);
+        updateInformation();
+    });
+   } 
+});
+
+}
+
+updateInformation()
+
 
 //back navigation
 document.querySelector(".back-button").addEventListener("click", function() {
