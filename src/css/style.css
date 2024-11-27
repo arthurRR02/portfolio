@@ -486,6 +486,7 @@ contacts-button-row i {
 }
 
 @media(max-width: 1300px) {
+
     #individuar-site-image {
         position: absolute;
         bottom: 100px;
@@ -506,7 +507,7 @@ contacts-button-row i {
     }
 }
 
-@media(min-width: 1000px) {
+@media(min-width: 1400px) {
     body {
         font-size: 1.5em;
     }
