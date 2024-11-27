@@ -506,6 +506,16 @@ contacts-button-row i {
     }
 }
 
+@media(min-width: 1000px) {
+    body {
+        font-size: 1.5em;
+    }
+
+    .column-main {
+        margin: 0 64px;
+    }
+}
+
 @keyframes fadeOut {
     from {
         opacity: 1;
