@@ -507,13 +507,14 @@ contacts-button-row i {
     }
 }
 
-@media(min-width: 1400px) {
+@media(min-width: 1600px) {
     body {
         font-size: 1.5em;
     }
 
     .column-main {
         margin: 0 64px;
+        font-size: 1.5em;
     }
 }
 
