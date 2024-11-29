@@ -354,12 +354,6 @@ contacts-button-row i {
     color: var(--medium-blue);
 }
 
-.carrousel {
-    display: flex;
-    flex-direction: row;
-    margin: 36px 24px;
-}
-
 #github-profile {
     margin: 48px 24px;
     cursor: pointer;
@@ -368,28 +362,6 @@ contacts-button-row i {
 .portfolio-item {
     box-shadow: 0 4px 8px black;
     cursor: pointer;
-}
-
-.not-clickable {
-    cursor: default !important;
-}
-
-#individuar-site-image {
-    position: absolute;
-    bottom: 50px;
-    left: 80px;
-}
-
-#elso-site-image {
-    position: absolute;
-    bottom: 100px;
-    left: 280px;
-}
-
-#portfolio-site-image {
-    position: absolute;
-    bottom: 220px;
-    left: 80px;
 }
 
 .portfolio-grid-image {
@@ -402,23 +374,8 @@ contacts-button-row i {
 
 #portfolio-items-images {
     max-height: 70vh;
+    overflow: hidden;
 }
-
-.clickable-site:hover {
-    color: var(--dark-blue);
-    cursor: pointer;
-}
-
-.wide-image {
-    grid-column: span 12;
-    grid-row: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(1.2);
-    opacity: 1;
-    z-index: 10;
-  }
 
   #portfolio-info {
     color: white;
@@ -460,15 +417,33 @@ contacts-button-row i {
     text-align: right;
   }
 
-  .image-grid-item {
-    cursor: pointer;
-    transition: transform 0.5s ease, opacity 0.3s ease;
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
   }
 
-  .image-grid-item:not(.wide-image) {
-    opacity: 0.8;
-    transform: scale(1);
-}
+  .carousel-slide {
+    margin: 0 4px;
+  }
+
+  .carousel-controller {
+    display: flex;
+    justify-content: center;
+    width: 45vw;
+    margin: 0 16px;
+  }
+
+  .dot-indicator {
+    width: 2vh;
+    height: 2vh;
+    background-color: var(--dark-blue);
+    border-radius: 50%;
+    margin: 0 4px;
+  }
+
+  .selected-indicator {
+    background-color: var(--medium-blue);
+  }
 
 .fade-out {
     animation: fadeOut 0.3s forwards; 
@@ -515,14 +490,5 @@ contacts-button-row i {
     .column-main {
         margin: 0 64px;
         font-size: 1.5em;
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
     }
 }

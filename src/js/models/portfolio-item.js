@@ -1,5 +1,6 @@
 class PortfolioItem {
-    constructor(description, featureTitles, featureDescriptions, imageName) {
+    constructor(madeWithLabel, description, featureTitles, featureDescriptions, imageName) {
+        this.madeWithLabel = madeWithLabel
         this.description = description;
         this.featureTitles = featureTitles;
         this.featureDescriptions = featureDescriptions;
@@ -9,6 +10,7 @@ class PortfolioItem {
     static getPortfolioItems() {
         return [
             new PortfolioItem(
+                "portfolioFlutterWebsite",
                 "portfolioIndividuarDescription",
                 [
                     "portfolioIndividuarMainPageTitle", 
@@ -25,6 +27,7 @@ class PortfolioItem {
                 "individuar_site"
             ),
             new PortfolioItem(
+                "portfolioFlutterWebsite",
                 "portfolioElsoDescription",
                 [
                     "portfolioElsoHomeTitle",
@@ -39,6 +42,23 @@ class PortfolioItem {
                     "portfolioElsoTextsDescription"
                 ],
                 "elso_site"
+            ),
+            new PortfolioItem(
+                "mock",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum id culpa aliquam ullam molestias, dignissimos fugiat odit ad dicta est quam odio laboriosam natus asperiores eaque ipsam voluptatum aspernatur.",
+                [
+                    "Lorem",
+                    "Lorem",
+                    "Lorem",
+                    "Lorem"
+                ],
+                [
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum id culpa aliquam ullam molestias, dignissimos fugiat odit ad dicta est quam odio laboriosam natus asperiores eaque ipsam voluptatum aspernatur.",
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum id culpa aliquam ullam molestias, dignissimos fugiat odit ad dicta est quam odio laboriosam natus asperiores eaque ipsam voluptatum aspernatur.",
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum id culpa aliquam ullam molestias, dignissimos fugiat odit ad dicta est quam odio laboriosam natus asperiores eaque ipsam voluptatum aspernatur.",
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum id culpa aliquam ullam molestias, dignissimos fugiat odit ad dicta est quam odio laboriosam natus asperiores eaque ipsam voluptatum aspernatur."
+                ],
+                "portfolio_site"
             )
         ];
     }
