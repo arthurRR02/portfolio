@@ -365,32 +365,49 @@ contacts-button-row i {
     cursor: pointer;
 }
 
+.photo-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .photo-container picture {
+    display: block;
+    width: 100%;
+  }
+
 .portfolio-item {
     box-shadow: 0 4px 8px black;
     cursor: pointer;
 }
 
+.photo-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.photo-container .photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000090; 
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .photo-container:hover .photo-overlay {
+    opacity: 1;
+  }
+
+
 .not-clickable {
     cursor: default !important;
 }
 
-#individuar-site-image {
-    position: absolute;
-    bottom: 50px;
-    left: 80px;
-}
-
-#elso-site-image {
-    position: absolute;
-    bottom: 100px;
-    left: 280px;
-}
-
-#portfolio-site-image {
-    position: absolute;
-    bottom: 220px;
-    left: 80px;
-}
 
 .portfolio-grid-image {
     display: grid;
@@ -487,24 +504,6 @@ contacts-button-row i {
 
 @media(max-width: 1300px) {
 
-    #individuar-site-image {
-        position: absolute;
-        bottom: 100px;
-        left: 180px;
-        
-    }
-    
-    #elso-site-image {
-        position: absolute;
-        bottom: 150px;
-        left: 280px;
-    }
-    
-    #portfolio-site-image {
-        position: absolute;
-        bottom: 200px;
-        left: 180px;
-    }
 }
 
 @media(min-width: 1600px) {

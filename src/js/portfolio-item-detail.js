@@ -11,19 +11,21 @@ for(let i = 0; i < portfolioItems.length; i++) {
     if(elementIndex === i) {
         imageList += `
         <picture class="wide-image image-grid-item">
-            <source media="(min-width: 1600px)" srcset="../assets/${portfolioItems[i].imageName}.png">
-            <source media="(min-width: 1300px)" srcset="../assets/${portfolioItems[i].imageName}_md.png">
-            <source media="(min-width: 800px)" srcset="../assets/${portfolioItems[i].imageName}_sm.png">
-            <img src="../assets/${portfolioItems[i].imageName}_sm.png" alt="${portfolioItems[i].imageName}" />
+            <source media="(min-width: 1800px)" srcset="../assets/images/${portfolioItems[i].imageName}_xlg.png">
+            <source media="(min-width: 1600px)" srcset="../assets/images/${portfolioItems[i].imageName}_lg.png">
+            <source media="(min-width: 1300px)" srcset="../assets/images/${portfolioItems[i].imageName}_md.png">
+            <source media="(min-width: 800px)" srcset="../assets/images/${portfolioItems[i].imageName}_sm.png">
+            <img src="../assets/images/${portfolioItems[i].imageName}_sm.png" alt="${portfolioItems[i].imageName}" />
         </picture>
     `;
     } else {
         imageList += `
         <picture class="image-grid-item">
-            <source media="(min-width: 1600px)" srcset="../assets/${portfolioItems[i].imageName}.png">
-            <source media="(min-width: 1300px)" srcset="../assets/${portfolioItems[i].imageName}_md.png">
-            <source media="(min-width: 800px)" srcset="../assets/${portfolioItems[i].imageName}_sm.png">
-            <img src="../assets/${portfolioItems[i].imageName}_sm.png" alt="${portfolioItems[i].imageName}" />
+            <source media="(min-width: 1800px)" srcset="../assets/images/${portfolioItems[i].imageName}_xlg.png">
+            <source media="(min-width: 1600px)" srcset="../assets/images/${portfolioItems[i].imageName}_lg.png">
+            <source media="(min-width: 1300px)" srcset="../assets/images/${portfolioItems[i].imageName}_md.png">
+            <source media="(min-width: 800px)" srcset="../assets/images/${portfolioItems[i].imageName}_sm.png">
+            <img src="../assets/images/${portfolioItems[i].imageName}_sm.png" alt="${portfolioItems[i].imageName}" />
         </picture>
     `;
     }
