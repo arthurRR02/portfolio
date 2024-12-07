@@ -1,5 +1,6 @@
 class PortfolioItem {
-    constructor(description, featureTitles, featureDescriptions, imageName) {
+    constructor(madeWithLabel, description, featureTitles, featureDescriptions, imageName) {
+        this.madeWithLabel = madeWithLabel
         this.description = description;
         this.featureTitles = featureTitles;
         this.featureDescriptions = featureDescriptions;
@@ -9,6 +10,24 @@ class PortfolioItem {
     static getPortfolioItems() {
         return [
             new PortfolioItem(
+                "portfolioFlutterWebsite",
+                "portfolioElsoDescription",
+                [
+                    "portfolioElsoHomeTitle",
+                    "portfolioElsoFaqTitle",
+                    "portfolioElsoTestimonialTitle",
+                    "portfolioElsoTextsTitle"
+                ],
+                [
+                    "portfolioElsoHomeDescription",
+                    "portfolioElsoFaqDescription",
+                    "portfolioElsoTestimonialsDescription",
+                    "portfolioElsoTextsDescription"
+                ],
+                "elso_site"
+            ),
+            new PortfolioItem(
+                "portfolioFlutterWebsite",
                 "portfolioIndividuarDescription",
                 [
                     "portfolioIndividuarMainPageTitle", 
@@ -25,20 +44,21 @@ class PortfolioItem {
                 "individuar_site"
             ),
             new PortfolioItem(
-                "portfolioElsoDescription",
+                "mock",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum id culpa aliquam ullam molestias, dignissimos fugiat odit ad dicta est quam odio laboriosam natus asperiores eaque ipsam voluptatum aspernatur.",
                 [
-                    "portfolioElsoHomeTitle",
-                    "portfolioElsoFaqTitle",
-                    "portfolioElsoTestimonialTitle",
-                    "portfolioElsoTextsTitle"
+                    "Lorem",
+                    "Lorem",
+                    "Lorem",
+                    "Lorem"
                 ],
                 [
-                    "portfolioElsoHomeDescription",
-                    "portfolioElsoFaqDescription",
-                    "portfolioElsoTestimonialsDescription",
-                    "portfolioElsoTextsDescription"
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum id culpa aliquam ullam molestias, dignissimos fugiat odit ad dicta est quam odio laboriosam natus asperiores eaque ipsam voluptatum aspernatur.",
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum id culpa aliquam ullam molestias, dignissimos fugiat odit ad dicta est quam odio laboriosam natus asperiores eaque ipsam voluptatum aspernatur.",
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum id culpa aliquam ullam molestias, dignissimos fugiat odit ad dicta est quam odio laboriosam natus asperiores eaque ipsam voluptatum aspernatur.",
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum id culpa aliquam ullam molestias, dignissimos fugiat odit ad dicta est quam odio laboriosam natus asperiores eaque ipsam voluptatum aspernatur."
                 ],
-                "elso_site"
+                "portfolio_site"
             )
         ];
     }

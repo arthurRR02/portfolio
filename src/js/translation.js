@@ -1,6 +1,6 @@
 import i18n from './i18n.js';
 
-document.addEventListener("DOMContentLoaded", () => {
+export function translate() {
     const languageForm = document.getElementById("language-switcher");
 
     const savedLanguage = sessionStorage.getItem("checkboxState");
@@ -16,4 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
         sessionStorage.setItem("checkboxState", selectedLanguage);
         i18n.loadLanguage(selectedLanguage);
     });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    translate()
 });

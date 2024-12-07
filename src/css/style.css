@@ -143,7 +143,7 @@ iframe {
     min-height: 100%;
     min-height: 100vh;
     background-color: var(--medium-blue);
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -239,7 +239,7 @@ language-switcher label:hover {
 contacts-button-row {
     display: flex;
     flex-direction: row;
-    justify-self: end;
+    justify-self: flex-end;
     align-items: end;
     justify-content: end;
     width: 100%;
@@ -354,16 +354,20 @@ contacts-button-row i {
     color: var(--medium-blue);
 }
 
-.carrousel {
-    display: flex;
-    flex-direction: row;
-    margin: 36px 24px;
-}
-
 #github-profile {
     margin: 48px 24px;
     cursor: pointer;
 }
+
+.photo-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .photo-container picture {
+    display: block;
+    width: 100%;
+  }
 
 .photo-container {
     position: relative;
@@ -419,23 +423,8 @@ contacts-button-row i {
 
 #portfolio-items-images {
     max-height: 70vh;
+    overflow: hidden;
 }
-
-.clickable-site:hover {
-    color: var(--dark-blue);
-    cursor: pointer;
-}
-
-.wide-image {
-    grid-column: span 12;
-    grid-row: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(1.2);
-    opacity: 1;
-    z-index: 10;
-  }
 
   #portfolio-info {
     color: white;
@@ -457,6 +446,7 @@ contacts-button-row i {
     grid-template-rows: auto;
     gap: 24px;
     margin: 12px 24px;
+    margin-bottom: 32px;
   }
 
   .feature-container {
@@ -477,15 +467,71 @@ contacts-button-row i {
     text-align: right;
   }
 
-  .image-grid-item {
-    cursor: pointer;
-    transition: transform 0.5s ease, opacity 0.3s ease;
+  .carousel-wrapper {
+    color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 16px;
   }
 
-  .image-grid-item:not(.wide-image) {
-    opacity: 0.8;
-    transform: scale(1);
-}
+  .carousel-controller-back, .carousel-controller-forward {
+    cursor: pointer;
+  }
+
+  .carousel-controller-back:hover, .carousel-controller-forward:hover {
+    color: var(--medium-blue);
+  }
+
+  .carousel-controller-disabled {
+    cursor: default;
+    color: #b3b1b1;
+  }
+
+  .carousel-controller-disabled:hover {
+    color: #b3b1b1;
+  }
+
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    color: var(--dark-blue);
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%; 
+    text-align: center;
+  }
+
+  .carousel-controller {
+    display: flex;
+    justify-content: center;
+    width: 45vw;
+    margin: 48px 16px;
+  }
+
+  .dot-indicator {
+    width: 2vh;
+    height: 2vh;
+    background-color: var(--dark-blue);
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+  }
+
+  .selected-indicator {
+    background-color: var(--medium-blue);
+  }
 
 .fade-out {
     animation: fadeOut 0.3s forwards; 
@@ -514,14 +560,5 @@ contacts-button-row i {
     .column-main {
         margin: 0 64px;
         font-size: 1.5em;
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
     }
 }
