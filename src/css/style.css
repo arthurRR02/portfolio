@@ -27,7 +27,7 @@ body {
     width: 100%;
     background-color: var(--medium-blue);
     scrollbar-color: white var(--light-blue);
-    font-size: 20px;
+    font-size: 16px;
 }
 
 
@@ -206,7 +206,11 @@ language-switcher label:hover {
 
 
 .back-button {
-    align-self: self-start;
+    position: fixed;
+    top: 25px;
+    left: 50px;
+    align-self: flex-start;
+    justify-self: flex-start;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -342,6 +346,7 @@ contacts-button-row i {
     justify-content: center;
     align-items: center;
     width: 49vw;
+    flex-grow: 1;
 }
 
 
@@ -354,15 +359,7 @@ contacts-button-row i {
     color: var(--medium-blue);
 }
 
-#github-profile {
-    margin: 48px 24px;
-    cursor: pointer;
-}
 
-.photo-container {
-    position: relative;
-    display: inline-block;
-  }
 
   .photo-container picture {
     display: block;
@@ -431,9 +428,10 @@ contacts-button-row i {
     overflow-y: auto;
   }
 
-  #portfolio-info > #feature-description {
+  #portfolio-info > #item-description {
     font-size: 1.2em;
     margin: 0 24px;
+    text-align: justify;
   }
 
   #portfolio-info > h3 {

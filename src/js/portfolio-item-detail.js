@@ -12,7 +12,19 @@ let currentIndex = 0;
 
 //Add images to the carousel
 for (let i = 0; i < portfolioItems.length; i++) {
-    imageList += `
+    if(portfolioItems[i].imageName === "pokedex") {
+        imageList += `
+        <div class="carousel-slide">
+            <picture>
+                <source media="(min-width: 1600px)" srcset="../assets/images/${portfolioItems[i].imageName}_lg.gif">
+                <source media="(min-width: 1300px)" srcset="../assets/images/${portfolioItems[i].imageName}_md.gif">
+                <source media="(min-width: 800px)" srcset="../assets/images/${portfolioItems[i].imageName}_sm.gif">
+                <img src="../assets/images/${portfolioItems[i].imageName}_sm.gif" alt="${portfolioItems[i].imageName}" />
+            </picture>
+        </div>
+    `;
+    } else {
+        imageList += `
         <div class="carousel-slide">
             <picture>
                 <source media="(min-width: 1800px)" srcset="../assets/images/${portfolioItems[i].imageName}_xlg.png">
@@ -23,6 +35,7 @@ for (let i = 0; i < portfolioItems.length; i++) {
             </picture>
         </div>
     `;
+    }
     dotController += `
     <div class="dot-indicator" carousel-index="${i}"></div>
     `;
@@ -106,7 +119,7 @@ function updateInformations(index) {
         }
 
     document.getElementById("portfolio-info").innerHTML = `
-    <p data-i18n="${portfolioItems[index].description}" id="feature-description"></p>
+    <p data-i18n="${portfolioItems[index].description}" id="item-description"></p>
     <h3 data-i18n="portfolioMainFunctionalities"></h3>
     <div class="grid-features">
         ${featuresHtml}

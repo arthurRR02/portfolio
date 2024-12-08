@@ -7,7 +7,7 @@
     "role": "Desenvolvedor",
     "resume": "Currículo",
     "contacts": "Contatos",
-    "aboutMeText": "Meu nome é Arthur Rios Ribeiro, sou programador autodidata há mais de três anos e decidi deixar o mundo financeiro para me dedicar inteiramente à programação. Atualmente, tenho domínio no desenvolvimento Android utilizando Kotlin e Java e também em Flutter. Sou uma pessoa adaptável, o que me permite desenvolver uma comunicação eficaz e proativa. Tenho grande interesse na cultura geek e estou sempre em busca de novos conhecimentos, o que me motiva a criar e desenvolver novos projetos. Atualmente, vivo na Argentina e recentemente comecei o curso de Ciências da Computação na Universidade Pública de La Plata. Sou fluente em português (minha língua nativa) e espanhol, e estou no processo de aprimorar meu inglês. Agora que já nos apresentamos, aproveite para dar uma olhada no meu portfólio. Fico no aguardo do seu contato! Abraços.",
+    "aboutMeText": "Meu nome é Arthur Rios Ribeiro, sou programador autodidata há mais de três anos e decidi deixar o mundo financeiro para me dedicar inteiramente à programação. Atualmente, tenho domínio no desenvolvimento Android utilizando Kotlin e Java, desenvolvimento multiplataforma utilizando Flutter, e também desenvolvimento web utilizando HTML, CSS e JavaScript. Sou uma pessoa adaptável, o que me permite desenvolver uma comunicação eficaz e proativa. Tenho grande interesse na cultura geek e estou sempre em busca de novos conhecimentos, o que me motiva a criar e desenvolver novos projetos. Sou fluente em português (minha língua nativa) e espanhol, e estou no processo de aprimorar meu inglês. Agora que já nos apresentamos, aproveite para dar uma olhada no meu portfólio. Fico no aguardo do seu contato! Abraços.",
     "servicesAppsDevelopment": "<strong>Desenvolvo aplicativos e sites personalizados</strong> para atender às suas necessidades específicas.",
     "servicesAppsDevelopmentDetail": "Crio aplicativos para smartphones e tablets Android, e também sites. Se você tem uma ideia ou precisa de um app ou site para sua empresa, transformo sua visão em realidade usando Java, Kotlin ou FLutter para garantir desempenho e segurança. Há alguns exemplos na aba portfólio.",
     "servicesAppAdjustmentAndImprovement": "<strong>Ajusto e melhoro aplicativos existentes</strong> para torná-los ainda melhores.",
@@ -18,8 +18,10 @@
     "servicesHelpPlanDetail": "Não sabe por onde começar? Ofereço uma consultoria para ajudá-lo a planejar e definir a melhor maneira de desenvolver seu aplicativo. Desde a concepção da ideia até a implementação final, estou aqui para orientar você em cada etapa do processo.",
     "portfolioWeb": "SITES",
     "portfolioSeeAllSites": "Ver todos os sites",
+    "portfolioSeeAllProjects": "Ver todos os projetos",
     "portfolioMoreProjects": "MAIS PROJETOS",
     "portfolioFlutterWebsite": "Website com o framework Flutter",
+    "portfolioKotlinAndroidApp": "App Android utilizando a linguaguem Kotlin",
     "portfolioMainFunctionalities": "Principais funcionalidades: ",
     "portfolioGoToThisWebsite": "Visite este site",
     "portfolioIndividuarDescription": "Este projeto foi desenvolvido em Flutter, uma tecnologia moderna que cria interfaces responsivas para web, desktop e dispositivos móveis. O site foi projetado para uma clínica de psicologia, com foco em captar pacientes e apresentar os serviços de forma clara e acessível.",
@@ -39,5 +41,12 @@
     "portfolioElsoTestimonialTitle": "Depoimentos: ",
     "portfolioElsoTestimonialsDescription": "Exibição de depoimentos de pacientes, apresentados em formato de carrossel, destacando experiências positivas para construir confiança com novos visitante.",
     "portfolioElsoTextsTitle": "Textos: ",
-    "portfolioElsoTextsDescription": "Uma área para artigos e publicações, onde a profissional compartilha conteúdos sobre temas relevantes da sua área de atuação."
+    "portfolioElsoTextsDescription": "Uma área para artigos e publicações, onde a profissional compartilha conteúdos sobre temas relevantes da sua área de atuação.",
+    "portfolioPokedexDescription": "Este app Android foi feito como uma prática de desenvolvimento Android, com uma abordagem modular, views customizadas e requests a API utilizando o Retrofit e Kotlin Coroutines para atinginr um bom resultado.",
+    "portfolioPokedexHomeTitle": "Home: ",
+    "portfolioPokedexHomeDescription": "A home está feita com um design simples de uma lista de pokémon. Uma request a PokéAPI é feita para retornaa a lista de pokémon e construir-la como uma lista de cartões com o nome, foto e número do pokémon que está na pokédex.",
+    "portfolioPokedexSearchTitle": "Página de Pesquisa: ",
+    "portfolioPokedexSearchDescription": "O app tem a funcionalidade de pesquisa para retornar os pókemon pesquisados por nome.",
+    "portfolioPokedexDetailTitle": "Página de Detalhes: ",
+    "portfolioPokedexDetailDescription": "O app tem uma página de detalhes onde toda a informação sobre os pokémon é apresentada, como as estatísticas e habilidades. Esta página foi feita como uma interface moderna baseada em abas e paginação."
 }

@@ -44,21 +44,19 @@ class PortfolioItem {
                 "individuar_site"
             ),
             new PortfolioItem(
-                "mock",
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum id culpa aliquam ullam molestias, dignissimos fugiat odit ad dicta est quam odio laboriosam natus asperiores eaque ipsam voluptatum aspernatur.",
+                "portfolioKotlinAndroidApp",
+                "portfolioPokedexDescription",
                 [
-                    "Lorem",
-                    "Lorem",
-                    "Lorem",
-                    "Lorem"
+                    "portfolioPokedexHomeTitle",
+                    "portfolioPokedexSearchTitle",
+                    "portfolioPokedexDetailTitle"
                 ],
                 [
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum id culpa aliquam ullam molestias, dignissimos fugiat odit ad dicta est quam odio laboriosam natus asperiores eaque ipsam voluptatum aspernatur.",
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum id culpa aliquam ullam molestias, dignissimos fugiat odit ad dicta est quam odio laboriosam natus asperiores eaque ipsam voluptatum aspernatur.",
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum id culpa aliquam ullam molestias, dignissimos fugiat odit ad dicta est quam odio laboriosam natus asperiores eaque ipsam voluptatum aspernatur.",
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet harum id culpa aliquam ullam molestias, dignissimos fugiat odit ad dicta est quam odio laboriosam natus asperiores eaque ipsam voluptatum aspernatur."
+                    "portfolioPokedexHomeDescription",
+                    "portfolioPokedexSearchDescription",
+                    "portfolioPokedexDetailDescription"
                 ],
-                "portfolio_site"
+                "pokedex"
             )
         ];
     }

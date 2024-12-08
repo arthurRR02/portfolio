@@ -7,7 +7,7 @@
     "role": "Developer",
     "resume": "Resume",
     "contacts": "Contacts",
-    "aboutMeText": "My name is Arthur Rios Ribeiro, I'm a self-taught programmer with over three years of experience, and I have decided to leave the financial market to fully dedicate myself to programming. At the moment I have expertise in Android development with Kotlin and Java, and also in Flutter. I'm an adaptable person, which allows me to develop effective and proactive communication. I have a great interest in geek culture and I'm always looking for new knowledge, which motivates me to create and develop new projects. At the moment, I live in Argentina and recently started the Degree in Systems at the National University of La Plata. I'm fluent in Portuguese (my native language) and Spanish, and I'm in the process of improving my English. Now that we know each other, feel free to take a look at my portfolio. I look forward to hearing from you! See you!",
+    "aboutMeText": "My name is Arthur Rios Ribeiro, I'm a self-taught programmer with over three years of experience, and I have decided to leave the financial market to fully dedicate myself to programming. At the moment I have expertise in Android development with Kotlin and Java, multiplatform development using Flutter, and also web development using HTML, CSS and JavaScript. I'm an adaptable person, which allows me to develop effective and proactive communication. I have a great interest in geek culture and I'm always looking for new knowledge, which motivates me to create and develop new projects. I'm fluent in Portuguese (my native language) and Spanish, and I'm in the process of improving my English. Now that we know each other, feel free to take a look at my portfolio. I look forward to hearing from you! See you!",
     "servicesAppsDevelopment": "<strong>I develop customized applications and websites</strong> to satisfy your needs",
     "servicesAppsDevelopmentDetail": "I create applications for Android Smartphones and tablets, and also websites. If you have an idea or need an app for your business, I transform your vision into reality using Java, Kotlin or Flutter to ensure performance and security. There are examples in the portfolio tab.",
     "servicesAppAdjustmentAndImprovement": "<strong>I adjust and improve your existing applications</strong> to make them even better.",
@@ -18,8 +18,10 @@
     "servicesHelpPlanDetail": "Don't you know where to start? I offer a consultancy to help you plan and define the best way to develop your application. From the conception of the idea to the final implementation, I'm here to guide you in every step of the process.",
     "portfolioWeb": "WEBSITES",
     "portfolioSeeAllSites": "See all websites",
+    "portfolioSeeAllProjects": "See all projects",
     "portfolioMoreProjects": "MORE PROJECTS",
     "portfolioFlutterWebsite": "Website created with the Flutter framework",
+    "portfolioKotlinAndroidApp": "Android app using Kotlin language",
     "portfolioMainFunctionalities": "MAIN FUNCTIONALITIES: ",
     "portfolioGoToThisWebsite": "Visit this site",
     "portfolioIndividuarDescription": "This project was developed using Flutter, a modern technology that creates responsive interfaces for web, desktop, and mobile devices. The website was designed for a psychology clinic, with a focus on attracting patients and presenting the services in a clear and accessible way.",
@@ -39,5 +41,12 @@
     "portfolioElsoTestimonialTitle": "Testimonials: ",
     "portfolioElsoTestimonialsDescription": "Display of patient testimonials, presented in carousel format, highlighting positive experiences to build trust with new visitors.",
     "portfolioElsoTextsTitle": "Texts: ",
-    "portfolioElsoTextsDescription": "An area to articles and publications, where the professional share contents relevants"
+    "portfolioElsoTextsDescription": "An area to articles and publications, where the professional share contents relevants",
+    "portfolioPokedexDescription": "This Android app was made to practice the Android development, with a module approach, custom views and API requests using Retrofit and Kotlin Coroutines to achive a good result",
+    "portfolioPokedexHomeTitle": "Home: ",
+    "portfolioPokedexHomeDescription": "The home page was made with a simple design of a list of pokémon. A request is made to PokéAPI to return the pokémon list and build it as a list of cards with the name, photo and number of the pokémon that is on the pokédex.",
+    "portfolioPokedexSearchTitle": "Search Page: ",
+    "portfolioPokedexSearchDescription": "The app has a search functionality to return searched pokémon by name.",
+    "portfolioPokedexFetailTitle": "Detail Page: ",
+    "portfolioPokedexDetailDescription": "The app also has a detail page where all the information about the pokémon is presented, like stats and abilities. This page was made as a modern interface based with tabs and pagination."
 }
