@@ -360,8 +360,7 @@ contacts-button-row i {
 }
 
 
-
-  .photo-container picture {
+.photo-container picture {
     display: block;
     width: 100%;
   }
