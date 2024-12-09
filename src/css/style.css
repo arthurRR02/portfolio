@@ -417,7 +417,7 @@ contacts-button-row i {
     margin: 0 24px;
 }
 
-#portfolio-items-images {
+.portfolio-items {
     max-height: 70vh;
     overflow: hidden;
 }
@@ -453,6 +453,7 @@ contacts-button-row i {
     padding: 16px;
     font-size: 0.6em;
     align-items: center;
+    width: 100%;
   }
 
   .feature-title {
@@ -462,6 +463,11 @@ contacts-button-row i {
 
   .feature-description {
     text-align: right;
+  }
+
+  .features-carousel-container {
+    display: flex;
+    flex-direction: column;
   }
 
   .carousel-wrapper {

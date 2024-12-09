@@ -121,9 +121,16 @@ function updateInformations(index) {
     document.getElementById("portfolio-info").innerHTML = `
     <p data-i18n="${portfolioItems[index].description}" id="item-description"></p>
     <h3 data-i18n="portfolioMainFunctionalities"></h3>
-    <div class="grid-features">
-        ${featuresHtml}
+        <div class="carousel-wrapper">
+            <i class="fa-solid fa-chevron-left carousel-controller-back"></i>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                ${featuresHtml}
+            </div>
+            <i class="fa-solid fa-chevron-right carousel-controller-forward"></i>
+            </div>
     </div>
+    <div class="carousel-controller"></div>
     `;
     
     translate()
