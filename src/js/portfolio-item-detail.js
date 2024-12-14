@@ -10,9 +10,14 @@ let imageList = ``;
 let dotController = ``;
 let currentIndex = 0;
 
+let featureCurrentIndex = 0;
+const featuresPerPage = 2;
+const totalFeatures = portfolioItems[currentIndex].featureTitles.length;
+const totalPages = Math.ceil(totalFeatures / featuresPerPage);
+
 //Add images to the carousel
 for (let i = 0; i < portfolioItems.length; i++) {
-    if(portfolioItems[i].imageName === "pokedex") {
+    if (portfolioItems[i].imageName === "pokedex") {
         imageList += `
         <div class="carousel-slide">
             <picture>
@@ -116,24 +121,65 @@ function updateInformations(index) {
             <span data-i18n="${portfolioItems[index].featureDescriptions[i]}" class="feture-description"></span></p>
     </div>
     `;
-        }
+    }
 
     document.getElementById("portfolio-info").innerHTML = `
     <p data-i18n="${portfolioItems[index].description}" id="item-description"></p>
     <h3 data-i18n="portfolioMainFunctionalities"></h3>
         <div class="carousel-wrapper">
-            <i class="fa-solid fa-chevron-left carousel-controller-back"></i>
+            <i class="fa-solid fa-chevron-left carousel-controller-back" id="feature-carousel-back"></i>
             <div class="carousel-container">
-                <div class="carousel-track">
+                <div class="feature-carousel-track">
                 ${featuresHtml}
             </div>
-            <i class="fa-solid fa-chevron-right carousel-controller-forward"></i>
             </div>
+            <i class="fa-solid fa-chevron-right carousel-controller-forward" id="feature-carousel-forward"></i>
     </div>
     <div class="carousel-controller"></div>
     `;
-    
-    translate()
+
+
+    translate();
+    featureCurrentIndex = 0;
+    updateFeatureCarousel(featureCurrentIndex);
 }
 
-updateCarousel(0);
+function updateFeatureCarousel(index) {
+    const featureCarouselTrack = document.querySelector(".feature-carousel-track");
+    const featureCarouselBack = document.getElementById("feature-carousel-back");
+    const featureCarouselForward = document.getElementById("feature-carousel-forward");
+    const slideWidth = featureCarouselTrack.getBoundingClientRect().width / featuresPerPage;
+
+    featureCarouselTrack.style.transform = `translateX(-${index * slideWidth}px)`;
+
+    if (index === 0) {
+        featureCarouselBack.classList.add("carousel-controller-disabled");
+    } else {
+        featureCarouselBack.classList.remove("carousel-controller-disabled");
+    }
+
+    if (index >= totalPages - 1) {
+        featureCarouselForward.classList.add("carousel-controller-disabled");
+    } else {
+        featureCarouselForward.classList.remove("carousel-controller-disabled");
+    }
+
+    featureCarouselBack.addEventListener("click", () => {
+        if (featureCurrentIndex > 0) {
+            featureCurrentIndex--;
+            updateFeatureCarousel(featureCurrentIndex);
+        }
+    });
+
+    featureCarouselForward.addEventListener("click", () => {
+        if (featureCurrentIndex < totalPages - 1) {
+            featureCurrentIndex++;
+            updateFeatureCarousel(featureCurrentIndex);
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    updateCarousel(0);
+    updateFeatureCarousel(featureCurrentIndex);
+});

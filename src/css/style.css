@@ -447,13 +447,13 @@ contacts-button-row i {
   }
 
   .feature-container {
-    display: flex;
+    flex: 0 0 40%;
+    box-sizing: border-box;
     background-color: var(--light-blue);
     color: black;
     padding: 16px;
-    font-size: 0.6em;
-    align-items: center;
-    width: 100%;
+    font-size: 0.8em;
+    margin: 5%;
   }
 
   .feature-title {
@@ -509,6 +509,21 @@ contacts-button-row i {
     transition: transform 0.5s ease;
     width: 100%;
     color: var(--dark-blue);
+  }
+
+  .feature-carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    transition: transform 0.5s ease;
+    gap: 16px;
+    width: max-content;
+    color: var(--dark-blue);
+    width: 100%;
+    overflow: hidden; */
   }
 
   .carousel-slide {
