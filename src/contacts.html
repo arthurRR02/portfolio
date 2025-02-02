@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script type="module" src="js/translation.js" defer></script>
-    <script type="module" src="js/contacts.js" defer></script>
-    <script type="module" src="components/language-switcher.js" defer></script>
-    <script type="module" src="components/contacts-button-row.js" defer></script>
-    <script type="module" src="components/main-button-grid.js" defer></script>
 </head>
+
 <body>
     <div class="column page-container">
         <language-switcher></language-switcher>
@@ -19,14 +16,24 @@
             <h1 data-i18n="contacts"></h1>
             <hr class="divider">
             <div id="contacts-container">
-                <a href="https://wa.me/5575983589427" target="_blank"><p><i class="fa-solid fa-phone contact-icon-background"></i> +55 75 9 8358-9427</p></a>
+                <a href="https://wa.me/5575983589427" target="_blank">
+                    <p><i class="fa-solid fa-phone contact-icon-background"></i> +55 75 9 8358-9427</p>
+                </a>
                 <p><i class="fa-solid fa-envelope contact-icon-background"></i>arthurriosribeiro@gmail.com</p>
-                <p><a href="https://www.linkedin.com/in/arthur-rios-ribeiro-5462931b5/" target="_blank"><i class="fa-brands fa-linkedin contact-icon-background"></i>Arthur Rios Ribeiro</a></p>
-                <a href="https://github.com/arthurRR02?tab=repositories" target="_blank"><i class="fa-brands fa-github contact-icon-background"></i>arthurRR02</a>
+                <p><a href="https://www.linkedin.com/in/arthur-rios-ribeiro-5462931b5/" target="_blank"><i
+                            class="fa-brands fa-linkedin contact-icon-background"></i>Arthur Rios Ribeiro</a></p>
+                <a href="https://github.com/arthurRR02?tab=repositories" target="_blank"><i
+                        class="fa-brands fa-github contact-icon-background"></i>arthurRR02</a>
             </div>
             <main-button-grid type="contacts"></main-button-grid>
         </div>
         <contacts-button-row></contacts-button-row>
     </div>
 </body>
+<script type="module" src="js/translation.js" defer></script>
+<script type="module" src="js/contacts.js" defer></script>
+<script type="module" src="components/language-switcher.js" defer></script>
+<script type="module" src="components/contacts-button-row.js" defer></script>
+<script type="module" src="components/main-button-grid.js" defer></script>
+
 </html>

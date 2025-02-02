@@ -1,7 +1,7 @@
 import PortfolioItem from "./models/portfolio-item.js";
 import { translate } from "./translation.js";
 
-const portfolioItems = PortfolioItem.getPortfolioItems();
+const portfolioItems = PortfolioItem;
 const carouselTrack = document.querySelector(".carousel-track");
 const carouselControllerBack = document.querySelector(".carousel-controller-back");
 const carouselControllerForward = document.querySelector(".carousel-controller-forward");
