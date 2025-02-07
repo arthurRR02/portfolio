@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //navigate to contacts page
     document.getElementById("contacts-button").addEventListener("click", function () {
-        navigation.navigate("src/contacts.html")
+        navigation.navigate("contacts.html")
     });
 });
 

@@ -7,7 +7,7 @@ if(buttonGrid) {
 
     if(aboutMeButton) {
         aboutMeButton.addEventListener("click", function() {
-            navigation.navigate("/src/about-me.html")
+            navigation.navigate("about-me.html")
         });
     }
 }
