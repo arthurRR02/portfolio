@@ -4,6 +4,10 @@ document.querySelector(".back-button").addEventListener("click", function() {
 
     setTimeout(() => {
         window.history.back();
+        const iframe = parent.document.getElementById("intern-navigation");
+        if (iframe) {
+            iframe.src = iframe.src;
+        }
     }, 300);
 });
 
