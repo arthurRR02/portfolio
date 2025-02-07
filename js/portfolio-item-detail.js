@@ -21,10 +21,10 @@ for (let i = 0; i < portfolioItems.length; i++) {
         imageList += `
         <div class="carousel-slide">
             <picture>
-                <source media="(min-width: 1600px)" srcset="../assets/images/${portfolioItems[i].imageName}_lg.gif">
-                <source media="(min-width: 1300px)" srcset="../assets/images/${portfolioItems[i].imageName}_md.gif">
-                <source media="(min-width: 800px)" srcset="../assets/images/${portfolioItems[i].imageName}_sm.gif">
-                <img src="../assets/images/${portfolioItems[i].imageName}_sm.gif" alt="${portfolioItems[i].imageName}" />
+                <source media="(min-width: 1600px)" srcset="./assets/images/${portfolioItems[i].imageName}_lg.gif">
+                <source media="(min-width: 1300px)" srcset="./assets/images/${portfolioItems[i].imageName}_md.gif">
+                <source media="(min-width: 800px)" srcset="./assets/images/${portfolioItems[i].imageName}_sm.gif">
+                <img src="./assets/images/${portfolioItems[i].imageName}_sm.gif" alt="${portfolioItems[i].imageName}" />
             </picture>
         </div>
     `;
@@ -32,11 +32,11 @@ for (let i = 0; i < portfolioItems.length; i++) {
         imageList += `
         <div class="carousel-slide">
             <picture>
-                <source media="(min-width: 1800px)" srcset="../assets/images/${portfolioItems[i].imageName}_xlg.png">
-                <source media="(min-width: 1600px)" srcset="../assets/images/${portfolioItems[i].imageName}_lg.png">
-                <source media="(min-width: 1300px)" srcset="../assets/images/${portfolioItems[i].imageName}_md.png">
-                <source media="(min-width: 800px)" srcset="../assets/images/${portfolioItems[i].imageName}_sm.png">
-                <img src="../assets/images/${portfolioItems[i].imageName}_sm.png" alt="${portfolioItems[i].imageName}" />
+                <source media="(min-width: 1800px)" srcset="./assets/images/${portfolioItems[i].imageName}_xlg.png">
+                <source media="(min-width: 1600px)" srcset="./assets/images/${portfolioItems[i].imageName}_lg.png">
+                <source media="(min-width: 1300px)" srcset="./assets/images/${portfolioItems[i].imageName}_md.png">
+                <source media="(min-width: 800px)" srcset="./assets/images/${portfolioItems[i].imageName}_sm.png">
+                <img src="./assets/images/${portfolioItems[i].imageName}_sm.png" alt="${portfolioItems[i].imageName}" />
             </picture>
         </div>
     `;

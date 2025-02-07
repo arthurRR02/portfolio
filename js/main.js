@@ -29,16 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
     //Download resume
     document.getElementById("resume-button").addEventListener("click", function() {
         const savedLanguage = sessionStorage.getItem("checkboxState") || "pt";
-        let resumeUrl = "../assets/documents/resume_pt.pdf"
+        let resumeUrl = "./assets/documents/resume_pt.pdf"
         switch(savedLanguage) {
             case "pt":
-                resumeUrl = "../assets/documents/resume_pt.pdf";
+                resumeUrl = "./assets/documents/resume_pt.pdf";
                 break;
             case "en":
-                resumeUrl = "../assets/documents/resume_en.pdf";
+                resumeUrl = "./assets/documents/resume_en.pdf";
                 break;
             case "es":
-                resumeUrl = "../assets/documents/resume_es.pdf"
+                resumeUrl = "./assets/documents/resume_es.pdf"
                 break; 
         }
         const a = document.createElement("a");

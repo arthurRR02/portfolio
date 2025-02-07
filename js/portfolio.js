@@ -9,7 +9,7 @@ document.querySelector(".back-button").addEventListener("click", function() {
 
 //open github
 document.getElementById("github-profile").addEventListener("click", function() {
-    window.open("https://github.com/arthurRR02?tab=repositories", "_blank");
+    window.open("https://github.com/arthurriosprogramador?tab=repositories", "_blank");
 });
 
 let portfolioItem = document.querySelector(".portfolio-item");
