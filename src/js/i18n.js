@@ -6,7 +6,7 @@ class I18n {
 
     async loadLanguage(lang) {
         try {
-            const response = await fetch(`./i18n/${lang}.json`);
+            const response = await fetch(`/src/i18n/${lang}.json`);
             this.translations = await response.json();
             this.lang = lang;
             this.translatePage();
