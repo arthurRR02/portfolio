@@ -3,11 +3,7 @@ document.querySelector(".back-button").addEventListener("click", function() {
     document.body.classList.add("fade-out");
 
     setTimeout(() => {
-        window.history.back();
-        const iframe = parent.document.getElementById("intern-navigation");
-        if (iframe) {
-            iframe.src = iframe.src;
-        }
+        window.location.href = "./index.html";
     }, 300);
 });
 
