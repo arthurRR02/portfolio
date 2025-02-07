@@ -2,7 +2,7 @@ class ContactsButtonRow extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <div id="contacts-button-row">
-            <a href="https://github.com/arthurRR02?tab=repositories" target="_blank">
+            <a href="https://github.com/arthurriosprogramador?tab=repositories" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
             <a href="https://wa.me/5575983589427" target="_blank">
