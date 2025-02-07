@@ -2,7 +2,7 @@ class Navigation {
     constructor() {}
 
     navigate(page) {
-        const portfolioPage = "portfolio.html";
+        const portfolioPage = "./portfolio.html";
         const iframe = parent.document.getElementById("intern-navigation");
 
         iframe.classList.add("iframe-hidden");

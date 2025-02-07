@@ -86,23 +86,23 @@ class MainButtonGrid extends HTMLElement {
     addEventByType(type) {
         switch(type) {
             case "about-me":
-                this.querySelector("#home-button").addEventListener("click", () => this.navigateTo('home.html'));
-                this.querySelector("#services-button").addEventListener("click", () => this.navigateTo('services.html'));
-                this.querySelector("#portfolio-button").addEventListener("click", () => this.navigateTo('portfolio.html'));
+                this.querySelector("#home-button").addEventListener("click", () => this.navigateTo('./home.html'));
+                this.querySelector("#services-button").addEventListener("click", () => this.navigateTo('./services.html'));
+                this.querySelector("#portfolio-button").addEventListener("click", () => this.navigateTo('./portfolio.html'));
             break;
             case "services":
-                this.querySelector("#home-button").addEventListener("click", () => this.navigateTo('home.html'));
-                this.querySelector("#about-me-button").addEventListener("click", () => this.navigateTo('about-me.html'));
-                this.querySelector("#portfolio-button").addEventListener("click", () => this.navigateTo('portfolio.html'));
+                this.querySelector("#home-button").addEventListener("click", () => this.navigateTo('./home.html'));
+                this.querySelector("#about-me-button").addEventListener("click", () => this.navigateTo('./about-me.html'));
+                this.querySelector("#portfolio-button").addEventListener("click", () => this.navigateTo('./portfolio.html'));
             break;
             case "portfolio":
-                this.querySelector("#home-button").addEventListener("click", () => this.navigateTo('home.html'));
-                this.querySelector("#about-me-button").addEventListener("click", () => this.navigateTo('about-me.html'));
-                this.querySelector("#services-button").addEventListener("click", () => this.navigateTo('services.html'));
+                this.querySelector("#home-button").addEventListener("click", () => this.navigateTo('./home.html'));
+                this.querySelector("#about-me-button").addEventListener("click", () => this.navigateTo('./about-me.html'));
+                this.querySelector("#services-button").addEventListener("click", () => this.navigateTo('./services.html'));
             default: 
-                this.querySelector("#about-me-button").addEventListener("click", () => this.navigateTo('about-me.html'));
-                this.querySelector("#services-button").addEventListener("click", () => this.navigateTo('services.html'));
-                this.querySelector("#portfolio-button").addEventListener("click", () => this.navigateTo('portfolio.html'));
+                this.querySelector("#about-me-button").addEventListener("click", () => this.navigateTo('./about-me.html'));
+                this.querySelector("#services-button").addEventListener("click", () => this.navigateTo('./services.html'));
+                this.querySelector("#portfolio-button").addEventListener("click", () => this.navigateTo('./portfolio.html'));
         }
     }
 }
